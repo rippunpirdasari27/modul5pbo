@@ -1,24 +1,13 @@
-package week05;
+package week05.myPackage;
+
+import week05.enkapsulasi.Car;
 
 public class Main {
     public static void main(String[] args)  {
+        MyClass.sayHello();
 
-        Mahasiswa mhs1 = new Mahasiswa();
-        System.out.println(mhs1.nama); // error
-        mhs1.tampilkanInfo();
-        System.out.println(mhs1.nama);
-        System.out.println(mhs1.umur);
-
-        Mahasiswa mhs2 = new Mahasiswa("Rido");
-        System.out.println(mhs2.nama);
-
-        System.out.println(Mahasiswa.universitas);
-        
-        mhs1.sayHello("Joko"); 
-
-        mhs1.sayHello2("Jhon", 49, true);
-        System.out.println(mhs2);
-        
+        Car myCar = new Car();
+        System.out.println(myCar.kapasitas);
+        // System.out.println(myCar.merk);
     }
-    
 }

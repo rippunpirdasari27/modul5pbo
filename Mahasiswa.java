@@ -1,37 +1,9 @@
-package week05;
+package week05.enkapsulasi;
 
 public class Mahasiswa {
-
-    // variabel instance
-    String nama = "Budi";
-    int umur = 20;
-
-    // variabel static
-    static String universitas = "Universitas Pertamina";
-
-    public Mahasiswa() {
-
-    }
-
-    public Mahasiswa(String nama) {
-        this.nama = nama;
-    }
-
-    public void tampilkanInfo() {
-        // variabel lokal
-        String nama = "Budi";
-        System.out.println(Mahasiswa.universitas);
-        System.out.println(nama);
-    }
-
-    public void sayHello(String nama) {
-        System.out.println("Nama: " + nama);
-    }
-
-    String nama2 = "Andre";
-    public String sayHello2(String nama, int umur, boolean isLulus) {
-        return "Nama saya " + nama + ", Umur saya " + umur + " Boolean " + isLulus;
-    }
+    private String nama;
+    private int umur;
+    private String jurusan;
 
     // method setter
     public void setNama(String nama) {
@@ -41,5 +13,25 @@ public class Mahasiswa {
     // method getter
     public String getNama() {
         return nama;
+    }
+
+    public void setUmur(int umur) {
+        if(umur >= 0) {
+            this.umur = umur;
+        } else {
+            System.out.println("Umur tidak valid");
+        }
+    }
+
+    public int getUmur() {
+        return umur;
+    }
+
+    public void setJurusan(String jurusan) {
+        this.jurusan = jurusan;
+    }
+
+    public String getJurusan() {
+        return jurusan;
     }
 }
